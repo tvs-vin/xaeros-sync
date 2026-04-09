@@ -1,4 +1,10 @@
 package tvs.xaeros.sync;
 
-public class XaerossyncServer {
+import net.fabricmc.api.DedicatedServerModInitializer;
+
+public class XaerossyncServer implements DedicatedServerModInitializer {
+    @Override
+    public void onInitializeServer() {
+        Xaerossync.LOGGER.info("Init Xaeros Sync (Server)");
+    }
 }

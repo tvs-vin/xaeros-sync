@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "xaeros-sync",
+	"version": "${version}",
+	"name": "Xaeros-Sync",
+	"description": "Upload and Download Xaeros maps selectively from the server!",
+	"authors": [
+		"tvs-vin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/xaeros_sync/icon.png",
+	"environment": "*",
+	"entrypoints": {
+      "main": [
+        "tvs.xaeros.sync.Xaerossync"
+      ],
+      "fabric-datagen": [
+        "tvs.xaeros.sync.XaerossyncDataGenerator"
+      ],
+      "client": [
+        "tvs.xaeros.sync.XaerossyncClient"
+      ],
+      "server": [
+	     "tvs.xaeros.sync.XaerossyncServer"
+	  ],
+      "fabric-gametest": [],
+      "preLaunch": []
+    },
+	"mixins": [
+		"xaeros-sync.mixins.json"
+	],
+	"depends": {
+      "fabric-api": "*",
+      "fabricloader": ">=0.18.5",
+      "java": ">=21",
+      "minecraft": "~1.21.11",
+      "tvs-lib": ">=0.1.0",
+      "xaeroworldmap": ">=1.40.11"
+    }
+}
